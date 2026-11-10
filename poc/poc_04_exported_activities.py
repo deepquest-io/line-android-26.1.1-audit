@@ -273,7 +273,7 @@ def generate_attacker_app_snippet(component: ExportedComponent, package: str) ->
     """Generate Android Java code snippet for an attacker application."""
     deep_link = component.deep_link_uris[0] if component.deep_link_uris else "line://poc"
     return f"""
-// ─── Attacker App Code Snippet (Java/Android) ──────────────────────────────────
+// ─── Attacker App Code Snippet (Java/Android) ───────────────────────────────
 // Target: {package}/{component.class_name}
 // Severity: {component.severity}
 
@@ -298,7 +298,7 @@ try {{
     // Component may require specific flags or data
     Log.e("POC", "Launch failed: " + e.getMessage());
 }}
-// ──────────────────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────────────────
 """
 
 
